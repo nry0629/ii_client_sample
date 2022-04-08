@@ -1,0 +1,4 @@
+[workspace]
+members = [
+    "src/ii_client_sample",
+]
