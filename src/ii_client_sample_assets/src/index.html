@@ -3,20 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>ii_client_sample</title>
+    <title>Internet Identity Client Sample</title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <main>
-      <img src="logo.png" alt="DFINITY logo" />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
-    </main>
+    <h1>Internet Identity Client Sample</h1>
+      <div>
+        <h2>Login</h2>
+        <button id="login" type="button">Login Internet Identity</button>
+      </div>
+      <div>
+        <label for="principal-id">principal-id</label>
+        <input id="principal-id" type="text" readonly size="64" />
+      </div>
+      <div>
+        <label for="is-authenticated">is-authenticated</label>
+        <input id="is-authenticated" type="text" readonly />
+      </div>
+      <div>
+        <h2>Call My Backend Canister</h2>
+        <button id="call" type="button">Call</button>
+      </div>
+      <div>
+        <label for="recived-principal-id">principal-id</label>
+        <input id="recived-principal-id" type="text" readonly size="64" />
+      </div>
+      <div>
+        <label for="recived-is-authenticated">is-authenticated</label>
+  
+        <input id="recived-is-authenticated" type="text" readonly />
+      </div>
+        <div>
+        <h2>Logout</h2>
+        <button id="logout" type="button">Logout</button>
+      </div>
   </body>
 </html>

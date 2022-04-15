@@ -1,10 +1,37 @@
 # ii_client_sample
+![ii_client_sample](/ii_client_sample_animation.gif)
+## 概要
+javascriptでローカル環境のインターネットアイデンティティを使用して認証するサンプルプロジェクトです。typescriptやreactを使用しないシンプルなサンプルとなっています。
+より作りこまれたサンプルをお探しの方は [こちら](https://smartcontracts.org/docs/samples/index.html)をどうぞ。
 
-Welcome to your new ii_client_sample project and to the internet computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+## ローカルでインターネットアイデンティティと連携する
+まず本プロジェクトを展開します。
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+```bash
+dfx start --background
+dfx deploy 
+```
 
-To learn more before you start working with ii_client_sample, see the following documentation available online:
+次に[インターネットアイデンティティ](https://github.com/dfinity/internet-identity)をローカル環境で実行します。
+```
+http://localhost:8080
+```
+でインターネットアイデンティティのフロントを起動し終えたなら本プロジェクトのフロントを起動します。
+```
+http://{asset_canister_id}.localhost:8000
+```
+もしくは次のコマンドで
+```bash
+npm start
+```
+フロントを開きます。
+
+```
+http://localhost:8081
+```
+
+## 参考
+ii_client_sampleは以下のドキュメントをもとに構築されています。
 
 - [Quick Start](https://smartcontracts.org/docs/quickstart/quickstart-intro.html)
 - [SDK Developer Tools](https://smartcontracts.org/docs/developers-guide/sdk-guide.html)
@@ -14,24 +41,3 @@ To learn more before you start working with ii_client_sample, see the following 
 - [Candid Introduction](https://smartcontracts.org/docs/candid-guide/candid-intro.html)
 - [JavaScript API Reference](https://erxue-5aaaa-aaaab-qaagq-cai.raw.ic0.app)
 
-If you want to start working on your project right away, you might want to try the following commands:
-
-```bash
-cd ii_client_sample/
-dfx help
-dfx config --help
-```
-
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
-
-```bash
-# Starts the replica, running in the background
-dfx start --background
-
-# Deploys your canisters to the replica and generates your candid interface
-dfx deploy
-```
-
-Once the job completes, your application will be available at `http://localhost:8000?canisterId={asset_canister_id}`.
