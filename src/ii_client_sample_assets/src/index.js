@@ -50,14 +50,6 @@ document.querySelector("#call").addEventListener("click", async (e) => {
 });
 
 
-document.querySelector("#call").addEventListener("click", async (e) => {
-  let iiClientSampleActor = await getActor();
-  const myPrincipal = await iiClientSampleActor.get_my_principal();
-  document.getElementById("recived-principal-id").value = myPrincipal.principal_id;
-  document.getElementById("recived-is-authenticated").value = myPrincipal.is_authenticated;
-});
-
-
 document.querySelector("#logout").addEventListener("click", async (e) => {
   let authClient = await getAuthClient();
   if(authClient != null){
